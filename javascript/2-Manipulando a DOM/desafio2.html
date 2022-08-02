@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Curso Javascirpt</title>
+
+
+</head>
+
+<body>
+
+    <button onclick="criaBox()">Me pressione</button>
+    <div id="app">
+
+    </div>
+    <script>
+        //função gera uma cor randomica
+        function getRandomColor() {
+            //caractéres utilizados em hexadecimal
+            var letters = "0123456789ABCDEF";
+            //simbolo para que antece valor hexadecimal das cares
+            var color = "#";
+            //gera numeros de 1 a 6 que é a quantidade de casas hexadecimais de um numero ou cor
+            for (var i = 0; i < 6; i++) {
+                //verifica se o numero possue o tamanho de 6 casas e o randomiza multiplicando por 16 que é o numero de casas hexadecimais.
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        //var newColor = getRandomColor(); // #E943F0
+
+        function criaBox() {
+            //função cria uma div com a class box com os atributos CSS e a atribui a div app
+            var divbox = document.createElement('div');
+            divbox.setAttribute('class', 'box');
+            //atribui styles css a divbox
+            divbox.style.width = 100;
+            divbox.style.height = 100;
+            divbox.style.backgroundColor = getRandomColor();
+            //atribui a div a #app
+            var buscadivapp = document.querySelector('#app');
+            buscadivapp.appendChild(divbox);
+
+        }
+    </script>
+</body>
+
+</html>

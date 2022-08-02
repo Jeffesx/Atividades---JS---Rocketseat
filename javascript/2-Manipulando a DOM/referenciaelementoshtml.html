@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Curso Javascirpt</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <button class="botao">Adicionar</button>
+    </div>
+    <!--div é uma divisão por meio de sessões no HTML-->
+
+    <script>
+        //referenciando elementos HTML no javascript
+        // a função document.getElementByID serve para buscar elementos HTML com base no ID
+        var inputElementbyID = document.getElementById("nome");
+        console.log(inputElementbyID);
+
+        // a função document.getElementByTagName, busca todos os elementos que possuem a tag informada
+        //esse método também sempre retorna um vetor, podemos colocar o [] com o numero da posição do elemento após os ()
+        var inputElementbyTagName = document.getElementsByTagName("input");
+        console.log(inputElementbyTagName);
+        // a função document.getElementByClassName, busca todos os elementos que possuem a class informada
+        //esse método também sempre retorna um vetor, podemos colocar o [] com o numero da posição do elemento após os ()
+        var inputElementbyClassName = document.getElementsByClassName("");
+        console.log(inputElementbyClassName);
+        //a função document.querySelector, ele percorre a DOM e tras os elementos conforme setados a ele.
+        //quando se coloca [] você referência a propriedade do elemento.
+        var inputElementQuerySelector = document.querySelector("body div#app input")
+        console.log(inputElementQuerySelector);
+        //referenciando ações no HTML via javascript
+        //função referencia a tag button com a class botão
+        var btnElement = document.querySelector('button.botao');
+        //busca o texto que está escrito dentro do botão.
+        var inputElement = document.querySelector("input[name=nome]");
+        //a funçãoa atribui a ação onclick ao elemento referenciado.
+        btnElement.onclick = function() {
+            //atribui o valor do elemento input na variavel text
+            var text = inputElement.value;
+            alert(text);
+
+        }
+    </script>
+</body>
+
+</html>

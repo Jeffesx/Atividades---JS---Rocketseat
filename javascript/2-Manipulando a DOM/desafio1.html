@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Curso Javascirpt</title>
+</head>
+
+<body>
+
+    <button onclick="criaBox()">Me pressione</button>
+    <div id="app">
+
+    </div>
+    <script>
+        function criaBox() {
+            //função cria uma div com a class box com os atributos CSS e a atribui a div app
+            var divbox = document.createElement('div');
+            divbox.setAttribute('class', 'box');
+            //atribui styles css a divbox
+            divbox.style.width = 100;
+            divbox.style.height = 100;
+            divbox.style.backgroundColor = '#f00';
+            //atribui a div a #app
+            var buscadivapp = document.querySelector('#app');
+            buscadivapp.appendChild(divbox);
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Curso Javascirpt</title>
+    </head>
+    <body>
+
+
+        <script>
+            //função utilizadas para reutilização de código
+            //nomedafunção(valores recebidos)
+            function retonasexoif(sexo){
+                //variaveis dentro de funções só são viziveis dentro das mesmas
+                //if é uma condicional se
+                //== verifica se o valor das variaveis são iguais
+                //=== verifica se o valor e o tipo das variaveis são iguais
+                
+                if(sexo =="M"){
+                    return "Masculino";
+                }else if( sexo=== "F"){
+                    return " Feminino";
+                }else{
+                    return "Outro"
+                }
+            }
+            function retornasexoswitch(sexo) {
+                //switch condiciounal com casos.
+                //cases são possibilidades, e return retornos dessas possibilidades
+                switch(sexo){
+
+                case "M":
+                    return "Masculino";
+                case "F":
+                    return "Feminino";
+                default:
+                    return "Outro"
+                
+            }}
+            var resultado = retornasexoswitch("F");
+            //utilização da função atribuindo um valor a operação
+            var resultado = retonasexoif("M");
+         //exibe o resultado que é uma variavel que tem atribuida a função soma
+            console.log(resultado);
+        </script>
+    </body>
+</html>

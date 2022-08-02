@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Curso Javascirpt</title>
+    <script>
+    </script>
+</head>
+
+<body>
+
+    <div id="app">
+
+    </div>
+
+    <script>
+        var botao = function criabotao() {
+
+
+            //Cria um botão e atribui o texto Clique aqui
+            var buttonElement = document.createElement('button');
+            var textNode = document.createTextNode('Clique Aqui');
+            buttonElement.appendChild(textNode);
+            //Atribui o elemento button a div id=app
+            var buscadivapp = document.querySelector('#app');
+            buscadivapp.appendChild(buttonElement);
+
+        }
+
+        function criabox() {
+            //cria uma div com a class = box
+            var divbox = document.createElement('div');
+            divbox.setAttribute('class', 'box');
+            //atribui styles css a divbox
+            divbox.style.width = 100;
+            divbox.style.height = 100;
+            divbox.style.backgroundColor = '#f00';
+            //atribui a div a #app
+            var buscadivapp = document.querySelector('#app');
+            buscadivapp.appendChild(divbox);
+        }
+        botao.onclick = criabox;
+    </script>
+</body>
+
+</html>

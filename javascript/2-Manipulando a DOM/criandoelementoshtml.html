@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Curso Javascirpt</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <input id="nome">
+           </div>
+
+        <script>
+            //A função cria um elemento do tipo "a" no html
+            var createLinkElement = document.createElement('a');
+            //adiciona os atributos ao elemento com o método setAttibute(atributo,link);
+            createLinkElement.setAttribute('href','https://medisanitas.sharepoint.com/Pages/Index.aspx');
+            //adiciona o atributo title ao elemento a(link)
+            createLinkElement.setAttribute('title','Sharepoint Medisanitas');
+            //cria um elemento do tipo texto com o método createTextNode
+            var createTextElement = document.createTextNode('Acessar sharepoint');
+            //atribui o elemento createTextElement ao createLinkElement
+            createLinkElement.appendChild(createTextElement);
+            //atribui a um container a div #app
+            var createConteinerElement = document.querySelector('#app');
+            //atribui o link ao container, o inserindo dentro da div app
+            createConteinerElement.appendChild(createLinkElement);
+            //seleciona o elemento com id nome
+            var inputElement= document.querySelector('#nome');
+            //remove elemento do HTML
+            createConteinerElement.removeChild(inputElement);
+        </script>
+    </body>
+</html>

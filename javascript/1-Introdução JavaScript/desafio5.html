@@ -1,0 +1,28 @@
+<html>
+    <heade>
+        <title>
+            "Dasafio RocketSeat"
+        </title>
+    </heade>
+    <body>
+
+        <script>
+            var usuarios = [
+ {
+    nome: "Diego",
+    habilidades: ["Javascript", "ReactJS", "Redux"]
+ },
+ {
+    nome: "Gabriel",
+    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+ }
+];
+//for of... é utilizado para percorrer um vetor sendo for(a variavel que vai receber as informações do objeto "for" o nome do objeto)
+//objeto.join insere um caracter entre os atributos do objeto.
+for(let usuario of usuarios){
+    console.log("O "+usuario.nome+" possui as habilidades: "+usuario.habilidades.join(","));
+}
+
+        </script>
+    </body>
+</html>
